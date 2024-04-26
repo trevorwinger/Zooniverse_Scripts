@@ -43,6 +43,7 @@ def upload_subject(file, project_id):
     s = Subject()
     s.links.project = project_id
     s.add_location(file)
+    s.metadata.update({'filename': file})
     s.save()
     return s
   except Exception as e:
