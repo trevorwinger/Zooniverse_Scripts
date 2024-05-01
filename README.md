@@ -3,11 +3,11 @@
 This repository contains scripts for processing images and uploading subject sets to Zooniverse projects. These scripts are designed to automate the workflow of preparing images for a Zooniverse project and programmatically uploading them as a subject set. Additionally, these scripts are accessible as Google Colab notebooks, providing an easy-to-use, cloud-based environment for running the scripts.
 ## Contents
 
-1. **modified_image_processing.py** - This script processes images in a specified folder, preparing them for upload. It supports images in .jpg and .png formats. Also available as a Google Colab notebook.
+1. **image_processing.py** - This script processes images in a specified folder, preparing them for upload. It supports images in .jpg and .png formats. Also available as a Google Colab notebook.
 
-2. **modified_subject_set_upload.py** - This script uploads the processed images as a subject set to a specific Zooniverse project. It requires Zooniverse credentials and project ID to function. Also available as a Google Colab notebook.
+2. **subject_set_upload.py** - This script uploads the processed images as a subject set to a specific Zooniverse project. It requires Zooniverse credentials and project ID to function. Also available as a Google Colab notebook.
 
-3. **run_both_scripts.py** - A utility script that sequentially runs the above scripts, taking care of processing images and then uploading them as a subject set to a Zooniverse project.
+3. **subject_wrapper.py** - A utility script that sequentially runs the above scripts, taking care of processing images and then uploading them as a subject set to a Zooniverse project.
 
 ## Prerequisites
 1. Python 3.x
@@ -45,7 +45,7 @@ To process images in a folder, run:
 
 ```bash
 
-python modified_image_processing.py <path_to_folder>
+python image_processing.py <path_to_folder>
 ```
 
 Ensure the path points to a folder containing .jpg or .png images.
@@ -55,7 +55,7 @@ To upload a subject set to a Zooniverse project, run:
 
 ```bash
 
-python modified_subject_set_upload.py <path_to_folder> <username> <password> <project_id>
+python subject_set_upload.py <path_to_folder> <username> <password> <project_id>
 ```
 
 Replace <path_to_folder>, <username>, <password>, and <project_id> with your specific details.
@@ -65,7 +65,7 @@ To process images and upload them as a subject set in one go, use:
 
 ```bash
 
-python run_both_scripts.py <path_to_folder> <username> <password> <project_id>
+python subject_wrapper.py <path_to_folder> <username> <password> <project_id>
 ```
 
 This command sequentially processes the images in the specified folder and uploads them to the Zooniverse project identified by <project_id> using the provided credentials.
