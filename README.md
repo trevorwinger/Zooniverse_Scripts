@@ -73,9 +73,11 @@ python subject_wrapper.py <path_to_folder> <username> <password> <project_id>
 This command sequentially processes the images in the specified folder and uploads them to the Zooniverse project identified by <project_id> using the provided credentials.
 
 ### Classification processing
-```
+```bash
 python transform_export <path_to_export_csv>
 ```
+path_to_export_csv should be the relative path to file from wherever the script is being ran from. e.g., if they are in the same directory (folder) ./my_file.csv
+
 Google Colab Notebooks
 
 For those preferring to run these scripts in a cloud environment, Google Colab versions are available:
