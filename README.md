@@ -9,6 +9,8 @@ This repository contains scripts for processing images and uploading subject set
 
 3. **subject_wrapper.py** - A utility script that sequentially runs the above scripts, taking care of processing images and then uploading them as a subject set to a Zooniverse project.
 
+4.**transform_export.py** - A utility script that takes a project's classification export (entire project or specific workflow) and transforms the JSON for each task and workflow to be a column x row representation. Each workflow is then saved as an independent CSV file.  
+
 ## Prerequisites
 1. Python 3.x
 2. Required Python packages: argparse, subprocess, tqdm, panoptes-client.
@@ -69,11 +71,17 @@ python subject_wrapper.py <path_to_folder> <username> <password> <project_id>
 ```
 
 This command sequentially processes the images in the specified folder and uploads them to the Zooniverse project identified by <project_id> using the provided credentials.
+
+### Classification processing
+```
+python transform_export <path_to_export_csv>
+```
 Google Colab Notebooks
 
 For those preferring to run these scripts in a cloud environment, Google Colab versions are available:
 1. [Image Processing Notebook](https://colab.research.google.com/drive/1G2ME0Oxa7HSW3pLLD5Rz6EGX9IHLNG_s)
 2. [Subject Set Uploading Notebook](https://colab.research.google.com/drive/1DbNXWxlYhwu7RK-Uixu3-KtRFFCpR1Tk)
+3. [Classification Transformation Notebook](https://colab.research.google.com/drive/12GoWU1Vox0AjAdZecAvr0VJQd4pbEM55?usp=sharing)
 
 ## Contributing
 Contributions to improve the scripts or add new features are welcome. Please fork the repository and submit a pull request with your changes.
