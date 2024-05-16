@@ -1,9 +1,17 @@
 import pandas as pd 
 import json
 from tqdm.auto import tqdm
+import argparse
+
+print('HERE')
+parser = argparse.ArgumentParser(description='Specify path to classification export.')
+parser.add_argument('path_to_file', type=str, help='Path to the file containing export data.')
+args = parser.parse_args()
+p_path = args.path_to_file
 
 
-df = pd.read_csv('./measuring-the-anzacs-classifications.csv')
+df = pd.read_csv(p_path)
+print('READ DF')
 
 # Assuming df is your original DataFrame
 # Step 1: Filter the DataFrame
