@@ -9,7 +9,7 @@ This repository contains scripts for processing images and uploading subject set
 
 3. **subject_wrapper.py** - A utility script that sequentially runs the above scripts, taking care of processing images and then uploading them as a subject set to a Zooniverse project.
 
-4.**transform_export.py** - A utility script that takes a project's classification export (entire project or specific workflow) and transforms the JSON for each task and workflow to be a column x row representation. Each workflow is then saved as an independent CSV file.  
+4. **transform_export.py** - A utility script that takes a project's classification export (entire project or specific workflow) and transforms the JSON for each task and workflow to be a column x row representation. Each workflow is then saved as an independent CSV file.  
 
 ## Prerequisites
 1. Python 3.x
